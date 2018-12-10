@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dojavi radar by QuattroFantastico</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/index.css" rel="stylesheet">    
+    <!-- JQuery -->
+    <script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
+    <!-- Facions -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- end of Favicons -->
+</head>
+
+<body>
+    <!-- Start your project here-->
+    <div class="container-fluid topBar">
+        <a class="appNav col-xs-2"><span class="fa fa-navicon"></span></a>
+        <a class="titleActive kartaBtn">Karta</a>
+        <a class="titlePasive listaBtn">Lista</a>
+        <a class="moreOpt"><span class="fa fa-ellipsis-v"></span></a>
+    </div>
+
+    <div class="sideBarWrap container-fluid col-xs-12">
+        <!--Card-->
+        <div class="card sideBar">
+            <!--Card content-->
+            <!--Title-->
+            <div class="card-title SideBarTitle">
+                <a class="closeSideBar"><span class="fa fa-arrow-left"></span></a>
+            </div>
+            <div class="card-body">
+                <!--Text-->
+                <div class="card-text">
+                    <a>
+                        <p class="sideItem">
+                            <img class="legendIcon" src="img/traffic-256.png" /> Prikaži promet
+                            <span class="pull-right"><input type="checkbox" /></span>
+                        </p>
+                    </a>
+                    <a>
+                        <p class="sideItem">
+                            <img style="height: 2.8vh;" src="img/petrol.png" /> Prikaži benzinske pumpe
+                            <span class="pull-right"><input type="checkbox" /></span>
+                        </p>
+                    </a>
+                    <a>
+                        <p class="sideItem">
+                            <span class="fa fa-wrench"></span> Prikaži auto mehaničare
+                            <span class="pull-right"><input type="checkbox" /></span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <!--/.Card content-->
+        </div>
+        <!--/.Card-->
+    </div>
+    
+    <div class="radarModalWrap container-fluid">
+        <!--Card-->
+        <div class="card radarModal">
+            <!--Card content-->
+            <!--Title-->
+            <h3 class="card-title">
+                <span class="tipPrijave">Prijavi radar</span><span class="pull-right closeRadarModal">&times;</span>
+            </h3>
+            <div class="card-body">
+                <!--Text-->
+                <div class="card-text container-fluid">
+                    <div class="imeSlikaRadara row">
+                        <img class="itemImg prijavaImg pull-left col-xs-2" src="img/police-icon-0.png" />
+                        <input class="col naseljeTxt" type="text" placeholder="Naselje u kojem se nalazi" />
+                    </div>
+                    <div class="opisWrap row">
+                        <textarea class="napomenaR" maxlength="360" placeholder="Vaša napomena"></textarea>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-primary btn-rounded sendBtn">Pošalji!</button>
+                    </div>
+                </div>
+            </div>
+            <!--/.Card content-->
+        </div>
+        <!--/.Card-->
+    </div>
+
+    <div class="potvrdiModalWrap container-fluid">
+        <!--Card-->
+        <div class="card potvrdiModal">
+            <!--Card content-->
+            <!--Title-->
+            <h3 class="card-title">
+                <span class="potvrdiModalNaslov">Potvrdi postojeći radar</span><span class="pull-right closePotvrdiModal">&times;</span>
+            </h3>
+            <div class="card-body">
+                <!--Text-->
+                <div class="card-text container-fluid">
+                    <div class="imeSlikaRadara row">
+                        <img class="itemImg prijavaImg pull-left col-xs-2" src="img/police-icon-0.png" />
+                        <h4 class="col naseljePot">Naselje u kojem se nalazi</h4>
+                    </div>
+                    <div class="opisWrap row">
+                        <p class="opisPot">Vaša napomena</p>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-primary btn-rounded potvrdiBtn pBtn">Potvrdi!</button>
+                        <button type="button" class="btn btn-danger btn-rounded cancelPotBtn pBtn">Prijavi novi</button>
+                    </div>
+                </div>
+            </div>
+            <!--/.Card content-->
+        </div>
+        <!--/.Card-->
+    </div>
+
+
+    <div class="appBody container-fluid">
+        <div class="mapCardWrap">
+            <!--Card-->
+            <div class="card">
+
+                <!--Card image-->
+                <div id="map"></div>
+                <!--/.Card image-->
+                <!--Button-->
+                <a class="radarBtn"></a>
+
+                <!--Card content-->
+                <div class="card-body">
+                    <a id="udesBtn" class="otherProbBtn pull-left"></a>
+                    <a id="someAlertBtn"class="otherProbBtn pull-right"></a>
+                    <!--Title-->
+                    <br />
+                    <h5 class="card-title">Uputstvo:</h5>
+                    <hr>
+                    <!--Text-->
+                    <p class="card-text">
+                        Na karti su prikazani svi dosad prijavljeni radari i druga obavještenja...
+                        <br /><br />
+                        <img src="img/police-icon-0.png" class="legendIcon" /> - Pritiskon na ovo dugme prijavi radar u svojoj blizini...
+                        <br />
+                        <img src="img/970411-200.png" class="legendIcon" /> - Pritiskom na ovo dugme prijavi udes u svojoj blizini...
+                        <br />
+                        <img src="img/alert.png" class="legendIcon" /> - Pritiskom na ovo dugme upozori vozače o nekom drugom događaju u tvojoj blizini...
+                    </p>
+                </div>
+                <a id="backToMapBtn" class="otherProbBtn listaBtn"><span class="fa fa-list"></span></a>
+                <!--/.Card content-->
+            </div>
+            <!--/.Card-->
+        </div>
+        <div class="listCardWrap">
+            <!--Card-->
+            <div class="card">
+                <!--Card content-->
+                <!--Title-->
+                <h3 class="card-title listTitle">Lista svih upozorenja</h3>
+                <div class="card-body">
+                    <!--Text-->
+                    <div class="card-text radarList">
+                        <a class="listItem">
+                            <img src="img/alert.png" class="itemImg pull-left" />
+                            <h4>Oprez</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <hr />
+                        </a>
+                        <a class="listItem">
+                            <img src="img/police-icon-0.png" class="itemImg pull-left" />
+                            <h4>Radar</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <hr />
+                        </a>
+                        <a class="listItem">
+                            <img src="img/970411-200.png" class="itemImg pull-left" />
+                            <h4>Nesreća</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <hr />
+                        </a>
+                        <a class="listItem">
+                            <img src="img/police-icon-0.png" class="itemImg pull-left" />
+                            <h4>Radar</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <hr />
+                        </a>
+                    </div>
+                </div>
+                <a id="backToMapBtn" class="otherProbBtn kartaBtn"><span class="fa fa-map"></span></a>
+                <!--/.Card content-->
+            </div>
+            <!--/.Card-->
+        </div>
+    </div>
+    <!-- /Start your project here-->
+    
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="scripts/cordova.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="scripts/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/navs.js"></script>
+    <script type="text/javascript" src="scripts/serverAndMap.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrXwVnnjHjeSeZELRf2sAKVNdHGZ5oDvY&callback=initMap">
+    </script>
+    <script>
+        //getPosition(true);
+        setInterval(getPosition, 15000);
+    </script>
+</body>
+
+</html>
